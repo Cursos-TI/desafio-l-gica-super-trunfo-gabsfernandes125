@@ -1,43 +1,92 @@
 #include <stdio.h>
+int main (){
 
-// Desafio Super Trunfo - Países
-// Tema 2 - Comparação das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de comparação de cartas de cidades. 
-// Siga os comentários para implementar cada parte do desafio.
+    //organização e declaração de variáveis
+int codigo1, codigo2, npontos1, npontos2;
+char carta1[2], carta2[2], estado1[3], estado2[3], cidade1[50], cidade2[50]; 
+float pop1, pop2, area1, area2, PIB1, PIB2, densidade1, densidade2, PPC1, PPC2;
 
-int main() {
-    // Definição das variáveis para armazenar as propriedades das cidades
-    // Você pode utilizar o código do primeiro desafio
+printf ("\n\n======================================");
+printf ("\n====== BEM-VINDO AO SUPER TRUNFO ======");
+printf ("\n======================================\n\n");
 
-    
-    // Cadastro das Cartas:
-    // Implemente a lógica para solicitar ao usuário que insira os dados das cidades
-    // utilizando a função scanf para capturar as entradas.
-    // utilize o código do primeiro desafio
 
-    // Exemplo:
-    // printf("Digite o código da cidade: ");
-    // scanf("%s", codigo);
-    // 
-    // (Repita para cada propriedade)
+    //primeira sessão de entradas - CARTA 1.
 
-    // Comparação de Cartas:
-    // Desenvolva a lógica de comparação entre duas cartas.
-    // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
+printf (">>>>>>>>>> CARTA 1 <<<<<<<<<\n");
+printf ("Carta (A ou B): ");
+scanf ("%1s", carta1);
 
-    // Exemplo:
-    // if (populacaoA > populacaoB) {
-    //     printf("Cidade 1 tem maior população.\n");
-    // } else {
-    //     printf("Cidade 2 tem maior população.\n");
-    // }
+printf ("Estado: ");
+scanf ("%2s", estado1);
 
-    // Exibição dos Resultados:
-    // Após realizar as comparações, exiba os resultados para o usuário.
-    // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
+printf ("Codigo: %2s", estado1);
+scanf ("%d", &codigo1);
 
-    // Exemplo:
-    // printf("A cidade vencedora é: %s\n", cidadeVencedora);
+printf ("Nome da cidade: ");
+scanf ("%49s", cidade1);
 
+printf ("Populacao: ");
+scanf ("%f", &pop1);
+
+printf ("Area (em M quadrado): ");
+scanf ("%f", &area1);
+
+printf ("PIB: ");
+scanf ("%f", &PIB1);
+
+printf ("Numeros de pontos turisticos: ");
+scanf ("%d", &npontos1);
+
+printf ("Densidade populacional: %f\n", pop1/area1);
+
+printf ("PIB per capita: %f", PIB1/pop1); 
+
+
+//segunda sessão de entrdas - CARTA 2.
+
+printf ("\n\n"); //preferi dar espaços assim por questão estética rsrsrs
+printf (">>>>>>>>>> CARTA 2 <<<<<<<<<\n");
+printf ("Carta (A ou B): ");
+scanf ("%1s", carta2);
+
+printf ("Estado: ");
+scanf ("%2s", estado2);
+
+printf ("Codigo: %2s", estado2);
+scanf ("%d", &codigo2);
+
+printf ("Nome da cidade: ");
+scanf ("%49s", cidade2);
+
+printf ("Populacao: ");
+scanf ("%f", &pop2);
+
+printf ("Area (em M quadrado): ");
+scanf ("%f", &area2);
+
+printf ("PIB: ");
+scanf ("%f", &PIB2);
+
+printf ("Numeros de pontos turisticos: ");
+scanf ("%d", &npontos2);
+
+printf ("Densidade populacional: %f\n", pop2/area2);
+
+printf ("PIB per capita: %f\n\n", PIB2/pop2);
+
+printf ("Carta1 - %s(%2s): %f\n", cidade1, estado1, pop1);
+printf ("Carta2 - %s(%2s): %f\n\n", cidade2, estado2, pop2);
+
+if (pop1 > pop2) {
+    printf ("%s ganhou!!!!\n", cidade1);
+}
+else {
+    printf ("RESULTADO: %s ganhou!!!", cidade2);
+}
+
+printf ("\n\n\n>>>>>>>>>>>>>>>>>>>>>>>>> FIMMMMMMMMMMM :-) <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
+//LINK DO GITHUB
+//https://github.com/Cursos-TI/desafio-cadastro-das-cartas-no-super-trunfo-gabsfernandes125.git
     return 0;
 }
